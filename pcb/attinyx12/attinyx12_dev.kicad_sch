@@ -5,8 +5,8 @@
 	(uuid "0b8e28b0-653e-4072-b0e8-3e5a3c288af6")
 	(paper "A")
 	(title_block
-		(title "ATTiny212 Development Board")
-		(company "erry Leumas")
+		(title "ATtinyX12 Development Board")
+		(company "Perry Leumas")
 	)
 	(lib_symbols
 		(symbol "Connector:USB_B_Micro"
