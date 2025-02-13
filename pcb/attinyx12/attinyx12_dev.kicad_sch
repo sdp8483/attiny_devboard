@@ -4639,7 +4639,7 @@
 		(uuid "be6abc68-f516-4c2a-b533-55e2f6bf3312")
 	)
 	(junction
-		(at 180.34 45.72)
+		(at 180.34 48.26)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c859404a-670f-4826-b22e-5892a1177d54")
@@ -4754,7 +4754,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 45.72) (xy 176.53 45.72)
+			(xy 180.34 48.26) (xy 176.53 48.26)
 		)
 		(stroke
 			(width 0)
@@ -4984,7 +4984,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 50.8) (xy 180.34 50.8)
+			(xy 165.1 53.34) (xy 180.34 53.34)
 		)
 		(stroke
 			(width 0)
@@ -5144,7 +5144,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 50.8) (xy 180.34 45.72)
+			(xy 180.34 53.34) (xy 180.34 48.26)
 		)
 		(stroke
 			(width 0)
@@ -5204,7 +5204,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 45.72) (xy 195.58 45.72)
+			(xy 190.5 48.26) (xy 195.58 48.26)
 		)
 		(stroke
 			(width 0)
@@ -5221,6 +5221,16 @@
 			(type default)
 		)
 		(uuid "5f5a4f52-c6c4-4049-b21d-890094850495")
+	)
+	(wire
+		(pts
+			(xy 165.1 50.8) (xy 153.67 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "608dcfea-0331-4b76-abfc-9b2cd0443089")
 	)
 	(polyline
 		(pts
@@ -5364,16 +5374,6 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 45.72) (xy 165.1 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "793f8b3e-5793-49f3-8a76-871a540c6604")
-	)
-	(wire
-		(pts
 			(xy 88.9 35.56) (xy 92.71 35.56)
 		)
 		(stroke
@@ -5414,16 +5414,6 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 45.72) (xy 165.1 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "84d7bdf6-b7ae-4249-9724-ebebd3ed9a95")
-	)
-	(wire
-		(pts
 			(xy 191.77 97.79) (xy 196.85 97.79)
 		)
 		(stroke
@@ -5454,7 +5444,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 48.26) (xy 153.67 48.26)
+			(xy 153.67 48.26) (xy 168.91 48.26)
 		)
 		(stroke
 			(width 0)
@@ -5621,6 +5611,16 @@
 			(type default)
 		)
 		(uuid "a8a20ae2-9d47-4ed3-a95e-d815c0f18004")
+	)
+	(wire
+		(pts
+			(xy 165.1 53.34) (xy 165.1 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a90406ac-2491-4c33-a043-3fe907a508d9")
 	)
 	(wire
 		(pts
@@ -5844,7 +5844,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 45.72) (xy 182.88 45.72)
+			(xy 180.34 48.26) (xy 182.88 48.26)
 		)
 		(stroke
 			(width 0)
@@ -6347,7 +6347,7 @@
 		(uuid "9845ad6c-dab1-44cb-8123-c9b0e0c14834")
 	)
 	(label "UPDI_OUT"
-		(at 195.58 45.72 0)
+		(at 195.58 48.26 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6587,7 +6587,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 186.69 45.72 90)
+		(at 186.69 48.26 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6595,7 +6595,7 @@
 		(dnp no)
 		(uuid "1bbc3b2f-ed0c-42bb-92f9-58e92989469b")
 		(property "Reference" "R5"
-			(at 186.69 43.688 90)
+			(at 186.69 46.228 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6603,7 +6603,7 @@
 			)
 		)
 		(property "Value" "470"
-			(at 186.69 45.72 90)
+			(at 186.69 48.26 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6611,7 +6611,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 186.69 47.498 90)
+			(at 186.69 50.038 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6620,7 +6620,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 186.69 45.72 0)
+			(at 186.69 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6629,7 +6629,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 186.69 45.72 0)
+			(at 186.69 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8229,7 +8229,7 @@
 	)
 	(symbol
 		(lib_id "Diode:PMEG6020ER")
-		(at 172.72 45.72 0)
+		(at 172.72 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8237,7 +8237,7 @@
 		(dnp no)
 		(uuid "955015e5-adba-4c66-a1de-0f8ca04bea93")
 		(property "Reference" "D3"
-			(at 172.72 43.18 0)
+			(at 172.72 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8245,7 +8245,7 @@
 			)
 		)
 		(property "Value" "PMEG6020ER"
-			(at 172.72 48.26 0)
+			(at 172.72 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8253,7 +8253,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:Nexperia_CFP3_SOD-123W"
-			(at 172.72 50.165 0)
+			(at 172.72 52.705 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8262,7 +8262,7 @@
 			)
 		)
 		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PMEG6020ER.pdf"
-			(at 172.72 45.72 0)
+			(at 172.72 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8271,7 +8271,7 @@
 			)
 		)
 		(property "Description" "60V, 2A low Vf MEGA Schottky barrier rectifier, SOD-123W"
-			(at 172.72 45.72 0)
+			(at 172.72 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
