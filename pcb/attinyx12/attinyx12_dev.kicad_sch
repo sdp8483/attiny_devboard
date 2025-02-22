@@ -6,7 +6,7 @@
 	(paper "A")
 	(title_block
 		(title "ATtinyX12 Development Board")
-		(date "2025-02-17")
+		(date "2025-02-22")
 		(company "Perry Leumas")
 	)
 	(lib_symbols
@@ -8110,7 +8110,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 39.37 114.3 0)
+		(at 39.37 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8118,7 +8118,7 @@
 		(dnp no)
 		(uuid "83093605-57d7-4bd4-949a-435296cf8b10")
 		(property "Reference" "R1"
-			(at 41.402 114.3 90)
+			(at 41.402 104.14 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8126,7 +8126,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 39.37 114.3 90)
+			(at 39.37 104.14 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8134,7 +8134,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 37.592 114.3 90)
+			(at 37.592 104.14 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8143,7 +8143,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 39.37 114.3 0)
+			(at 39.37 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8152,7 +8152,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 39.37 114.3 0)
+			(at 39.37 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8161,7 +8161,7 @@
 			)
 		)
 		(property "MPN" ""
-			(at 39.37 114.3 0)
+			(at 39.37 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8170,7 +8170,7 @@
 			)
 		)
 		(property "Manufacture" ""
-			(at 39.37 114.3 0)
+			(at 39.37 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8179,7 +8179,7 @@
 			)
 		)
 		(property "SPN" ""
-			(at 39.37 114.3 0)
+			(at 39.37 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8188,7 +8188,7 @@
 			)
 		)
 		(property "Supplier" ""
-			(at 39.37 114.3 0)
+			(at 39.37 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8197,7 +8197,7 @@
 			)
 		)
 		(property "Tolerance" ""
-			(at 39.37 114.3 0)
+			(at 39.37 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8206,7 +8206,7 @@
 			)
 		)
 		(property "Voltage" ""
-			(at 39.37 114.3 0)
+			(at 39.37 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8215,7 +8215,7 @@
 			)
 		)
 		(property "Power" ""
-			(at 39.37 114.3 0)
+			(at 39.37 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10033,7 +10033,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 39.37 104.14 90)
+		(at 39.37 114.3 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10041,7 +10041,7 @@
 		(dnp no)
 		(uuid "f674acca-9ae6-4be3-996e-b5b22cc89928")
 		(property "Reference" "D1"
-			(at 36.83 104.14 0)
+			(at 36.83 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10049,7 +10049,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 41.91 104.14 0)
+			(at 41.91 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10057,7 +10057,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 39.37 104.14 0)
+			(at 39.37 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10066,7 +10066,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 39.37 104.14 0)
+			(at 39.37 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10075,7 +10075,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 39.37 104.14 0)
+			(at 39.37 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)

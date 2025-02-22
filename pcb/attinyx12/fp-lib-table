@@ -1,4 +1,6 @@
 (fp_lib_table
   (version 7)
   (lib (name "pl_DPDT")(type "KiCad")(uri "${KIPRJMOD}/lib_fp/pl_DPDT.pretty")(options "")(descr ""))
+  (lib (name "pl_USB")(type "KiCad")(uri "${KIPRJMOD}/lib_fp/pl_USB.pretty")(options "")(descr ""))
+  (lib (name "pl_logo")(type "KiCad")(uri "${KIPRJMOD}/lib_fp/pl_logo.pretty")(options "")(descr ""))
 )

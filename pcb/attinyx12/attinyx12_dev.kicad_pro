@@ -51,19 +51,15 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [
-        "hole_clearance|77100000|33105000|744a6945-9c1d-42df-9b5c-44bdc8f07e14|2e791f3a-e3b6-40db-99a9-09f7fe0105e1",
-        "hole_clearance|77100000|33105000|744a6945-9c1d-42df-9b5c-44bdc8f07e14|98a8298f-b244-4575-a4a9-f81fd1038d52",
-        "hole_clearance|77300000|33105000|744a6945-9c1d-42df-9b5c-44bdc8f07e14|2c35659b-046f-4d29-8573-3f5eb124d9d1",
-        "hole_clearance|77300000|33105000|744a6945-9c1d-42df-9b5c-44bdc8f07e14|f532ff27-82f0-46e6-b54a-51941a867b2e",
-        "hole_clearance|82700000|33105000|d5ddeb16-d7b2-4043-a9b4-5e9b103ebb00|33dc4491-d3c5-4be1-8b6d-e44ef8afff54",
-        "hole_clearance|82700000|33105000|d5ddeb16-d7b2-4043-a9b4-5e9b103ebb00|b7f7159a-df3f-4db1-abe5-280d40e2e9c9",
-        "hole_clearance|82900000|33105000|d5ddeb16-d7b2-4043-a9b4-5e9b103ebb00|9376d6ff-7ca7-4cc6-9f2e-d412ee57010f",
-        "hole_clearance|82900000|33105000|d5ddeb16-d7b2-4043-a9b4-5e9b103ebb00|d346e27c-5e6d-4d3c-9e72-c0ba6671bb05",
-        "lib_footprint_mismatch|83810000|72580000|decd1739-57bd-45ef-9c10-f91ae7957826|00000000-0000-0000-0000-000000000000",
-        "silk_edge_clearance|75420000|27099999|c0a3736a-a69f-487b-9ac1-950747afdbbd|e8343b31-bca0-432c-b71e-702051815dc6",
-        "silk_edge_clearance|84580000|27100000|c0a3736a-a69f-487b-9ac1-950747afdbbd|f3d328ee-2c19-4557-9ec2-db80895f2566"
+        "lib_footprint_mismatch|83810000|71980000|decd1739-57bd-45ef-9c10-f91ae7957826|00000000-0000-0000-0000-000000000000"
       ],
       "meta": {
         "version": 2
@@ -122,21 +118,21 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.127,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.5,
-        "min_hole_clearance": 0.25,
+        "min_hole_clearance": 0.2,
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
         "min_resolved_spokes": 2,
-        "min_silk_clearance": 0.0,
-        "min_text_height": 0.8,
-        "min_text_thickness": 0.08,
+        "min_silk_clearance": 0.15,
+        "min_text_height": 1.0,
+        "min_text_thickness": 0.15,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.0,
-        "min_via_annular_width": 0.1,
-        "min_via_diameter": 0.5,
+        "min_track_width": 0.127,
+        "min_via_annular_width": 0.2,
+        "min_via_diameter": 0.25,
         "solder_mask_clearance": 0.0,
         "solder_mask_min_width": 0.0,
         "solder_mask_to_copper_clearance": 0.0,
@@ -185,7 +181,13 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.1,
+        0.2,
+        0.25,
+        0.3
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -212,7 +214,12 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -463,8 +470,8 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.3,
-        "via_diameter": 0.8,
-        "via_drill": 0.4,
+        "via_diameter": 0.45,
+        "via_drill": 0.2,
         "wire_width": 6
       },
       {
@@ -480,7 +487,7 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.5,
-        "via_diameter": 0.8,
+        "via_diameter": 0.6,
         "via_drill": 0.4,
         "wire_width": 6
       },
@@ -535,6 +542,18 @@
       {
         "netclass": "power",
         "pattern": "*V3*"
+      },
+      {
+        "netclass": "power",
+        "pattern": "*F1*"
+      },
+      {
+        "netclass": "power",
+        "pattern": "+5VA"
+      },
+      {
+        "netclass": "power",
+        "pattern": "GND1"
       }
     ]
   },
