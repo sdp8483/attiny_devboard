@@ -16,7 +16,7 @@ kicad-cli sch export pdf $input_sch \
 
 echo "Export PCB to PDF"
 kicad-cli pcb export pdf $input_pcb \
-    -l "B.Cu,B.Silkscreen,B.Courtyard,B.Fab,F.Cu,F.Silkscreen,F.Courtyard,F.Fab,Edge.Cuts,User.1" \
+    -l "B.Cu,B.Silkscreen,B.Courtyard,B.Fab,F.Cu,F.Silkscreen,F.Courtyard,F.Fab,Edge.Cuts,User.Drawings,User.Comments" \
     --include-border-title \
     --drill-shape-opt 1 \
     --output schematic_pdf/$output_pcb_pdf
