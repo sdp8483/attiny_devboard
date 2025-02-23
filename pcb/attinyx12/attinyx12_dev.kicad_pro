@@ -14,14 +14,14 @@
         "copper_text_thickness": 0.3,
         "copper_text_upright": false,
         "courtyard_line_width": 0.05,
-        "dimension_precision": 4,
+        "dimension_precision": 2,
         "dimension_units": 3,
         "dimensions": {
           "arrow_length": 1270000,
           "extension_offset": 500000,
           "keep_text_aligned": true,
-          "suppress_zeroes": false,
-          "text_position": 0,
+          "suppress_zeroes": true,
+          "text_position": 1,
           "units_format": 1
         },
         "fab_line_width": 0.1,
