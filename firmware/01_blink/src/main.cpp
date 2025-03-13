@@ -6,8 +6,8 @@
 #include "clock.h"  /* set main clock frequency using platformio.ini fcpu value */
 
 /* Define -------------------------------------------------------------------- */
-#define LED_BUILTIN_PORT  PORTA
-#define LED_BUILTIN_PIN   PIN3_bm 
+#define LED_PORT  PORTA
+#define LED_PIN   PIN3_bm 
 
 /* Macro --------------------------------------------------------------------- */
 
@@ -22,11 +22,11 @@ int main(void) {
     clock_init();   /* setup main clock frequency */
 
     /* setup LED pin */
-    LED_BUILTIN_PORT.OUTCLR = LED_BUILTIN_PIN;
-    LED_BUILTIN_PORT.DIRSET = LED_BUILTIN_PIN;
+    LED_PORT.OUTCLR = LED_PIN;
+    LED_PORT.DIRSET = LED_PIN;
 
     while(1) {
-        LED_BUILTIN_PORT.OUTTGL = LED_BUILTIN_PIN;
+        LED_PORT.OUTTGL = LED_PIN;
         _delay_ms(500);
     }
 }
