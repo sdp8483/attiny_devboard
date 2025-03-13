@@ -28,7 +28,7 @@ int main(void) {
     LED_PORT.OUTCLR = LED_PIN;
     LED_PORT.DIRSET = LED_PIN;
 
-    Serial.begin(BAUD); /* setup uart */
+    Serial.begin(BAUDRATE); /* setup uart */
     Serial.println("Hello World!");
 
     uint16_t blink_count = 0;
