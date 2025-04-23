@@ -34,14 +34,14 @@ int main(void) {
 
     uint32_t val = 0xBA5EBA11;
     uint8_t v = 0x42;
-    char str[] = "Hello World!";
+    char str[] = "Hello World!\n";
 
     while(1) {
         LED_PORT.OUTSET = LED_PIN;
 
         i2c_host.write(I2C_CLIENT_ADDRESS, (uint8_t *) &val, sizeof(val));
 
-        i2c_host.write(I2C_CLIENT_ADDRESS, v);
+        i2c_host.write(I2C_CLIENT_ADDRESS, v++);
 
         i2c_host.write(I2C_CLIENT_ADDRESS, str);
 
