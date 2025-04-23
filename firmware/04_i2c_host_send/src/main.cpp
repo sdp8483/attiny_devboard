@@ -8,8 +8,10 @@
 #include "i2c.h"
 
 /* Define -------------------------------------------------------------------- */
-#define LED_PORT        PORTA
-#define LED_PIN         PIN3_bm
+#define LED_PORT            PORTA
+#define LED_PIN             PIN3_bm
+
+#define I2C_CLIENT_ADDRESS  0x8
 
 /* Macro --------------------------------------------------------------------- */
 
@@ -30,13 +32,20 @@ int main(void) {
 
     i2c_host.begin();
 
-    /* send Ndata hint */
-    uint16_t data = 0xDEAD;
-    uint8_t *pt = (uint8_t *) &data;
-    *pt++;
+    uint32_t val = 0xBA5EBA11;
+    uint8_t v = 0x42;
+    char str[] = "Hello World!";
 
     while(1) {
-        i2c_host.write(8, "BASE");
+        LED_PORT.OUTSET = LED_PIN;
+
+        i2c_host.write(I2C_CLIENT_ADDRESS, (uint8_t *) &val, sizeof(val));
+
+        i2c_host.write(I2C_CLIENT_ADDRESS, v);
+
+        i2c_host.write(I2C_CLIENT_ADDRESS, str);
+
+        LED_PORT.OUTCLR = LED_PIN;
         _delay_ms(500);
     }
 }
