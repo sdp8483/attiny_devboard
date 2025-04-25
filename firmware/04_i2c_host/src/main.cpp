@@ -37,13 +37,13 @@ int main(void) {
 
     while(1) {
         LED_PORT.OUTSET = LED_PIN;
-        // i2c_host.write(I2C_CLIENT_ADDRESS, 0b01111111);
         i2c_host.write(I2C_CLIENT_ADDRESS, 0x7F);
-        // Serial.println(i2c_host.read(I2C_CLIENT_ADDRESS), HEX);
+
+        uint8_t data = i2c_host.read(I2C_CLIENT_ADDRESS);
+        Serial.println(data, HEX);
         _delay_ms(100);
 
         LED_PORT.OUTCLR = LED_PIN;
-        // i2c_host.write(I2C_CLIENT_ADDRESS, 0b11111101);
         i2c_host.write(I2C_CLIENT_ADDRESS, 0xFD);
         // Serial.println(i2c_host.read(I2C_CLIENT_ADDRESS), HEX);
         _delay_ms(100);

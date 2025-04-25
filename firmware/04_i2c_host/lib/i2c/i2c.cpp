@@ -67,7 +67,8 @@ I2C_HOST::i2c_return_t I2C_HOST::_wait_wif(void) {
         timeout++;
 
         #ifdef I2C_DEBUG_PRINT
-        Serial.println("wait for WIF");
+        Serial.print(timeout);
+        Serial.println(" wait for WIF");
         #endif
 
         if (timeout > I2C_TIMEOUT_LIMIT) {
@@ -94,7 +95,8 @@ I2C_HOST::i2c_return_t I2C_HOST::_wait_rif(void) {
         timeout++;
 
         #ifdef I2C_DEBUG_PRINT
-        Serial.println("wait for RIF");
+        Serial.print(timeout);
+        Serial.println(" wait for RIF");
         #endif
 
         if (timeout > I2C_TIMEOUT_LIMIT) {
@@ -136,11 +138,17 @@ I2C_HOST::i2c_return_t I2C_HOST::_wait_clkhold(void) {
         timeout++;
 
         #ifdef I2C_DEBUG_PRINT
-        Serial.println("wait for CLKHOLD");
+        Serial.print(timeout);
+        Serial.println(" wait for CLKHOLD");
         #endif
 
         if (timeout > I2C_TIMEOUT_LIMIT) {
             ret = I2C_TIMEOUT;
+
+            #ifdef I2C_DEBUG_PRINT
+            Serial.println("CLKHOLD timeout");
+            #endif
+
             break;
         }
     }
@@ -161,8 +169,6 @@ void I2C_HOST::write(uint8_t address, uint8_t *buffer, size_t len) {
 }
 
 uint8_t I2C_HOST::read(uint8_t address) {
-    uint8_t data;
-
     TWI0.MADDR = (address << 1) + 1;                       /* shift and set read/write bit */
     _rxack();
 
@@ -173,9 +179,10 @@ uint8_t I2C_HOST::read(uint8_t address) {
 
     _wait_clkhold();
 
-    data = TWI0.MDATA;
-    
-    TWI0.MCTRLB |= (1 << TWI_ACKACT_bm) | TWI_MCMD_STOP_gc;
+    uint8_t data = TWI0.MDATA;
 
+    TWI0.MCTRLB |= TWI_ACKACT_NACK_gc;
+	TWI0.MCTRLB |= TWI_MCMD_STOP_gc;
+    
     return data;
 }

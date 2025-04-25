@@ -27,7 +27,7 @@
 #define I2C_100kHz          100000
 #define I2C_400kHz          400000
 
-#define I2C_TIMEOUT_LIMIT   10000
+#define I2C_TIMEOUT_LIMIT   10
 
 /* Macros -------------------------------------------------------------------- */
 #define I2C_BAUD(F_SCL)     (((float) F_CPU / (2 * (float) F_SCL)) - 5)
