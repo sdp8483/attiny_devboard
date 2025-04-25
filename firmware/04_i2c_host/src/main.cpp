@@ -33,19 +33,33 @@ int main(void) {
     LED_PORT.OUTCLR = LED_PIN;
     LED_PORT.DIRSET = LED_PIN;
 
-    i2c_host.begin();
+    i2c_host.init();
+
+    uint8_t data;
 
     while(1) {
         LED_PORT.OUTSET = LED_PIN;
-        i2c_host.write(I2C_CLIENT_ADDRESS, 0x7F);
+        i2c_host.start(I2C_CLIENT_ADDRESS, I2C_HOST::i2c_host_direction::I2C_HOST_WRITE);
+        i2c_host.write(0x7F);
+        i2c_host.stop();
 
-        uint8_t data = i2c_host.read(I2C_CLIENT_ADDRESS);
+        i2c_host.start(I2C_CLIENT_ADDRESS, I2C_HOST::i2c_host_direction::I2C_HOST_READ);
+        data = i2c_host.read(I2C_HOST::i2c_host_read_response::I2C_HOST_READ_NACK);
+        i2c_host.stop();
+
         Serial.println(data, HEX);
         _delay_ms(100);
 
         LED_PORT.OUTCLR = LED_PIN;
-        i2c_host.write(I2C_CLIENT_ADDRESS, 0xFD);
-        // Serial.println(i2c_host.read(I2C_CLIENT_ADDRESS), HEX);
+        i2c_host.start(I2C_CLIENT_ADDRESS, I2C_HOST::I2C_HOST_WRITE);
+        i2c_host.write(0xFD);
+        i2c_host.stop();
+
+        i2c_host.start(I2C_CLIENT_ADDRESS, I2C_HOST::I2C_HOST_READ);
+        data = i2c_host.read(I2C_HOST::i2c_host_read_response::I2C_HOST_READ_NACK);
+        i2c_host.stop();
+        Serial.println(data, HEX);
+
         _delay_ms(100);
     }
 }
