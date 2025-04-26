@@ -40,7 +40,8 @@ int main(void) {
     while(1) {
         LED_PORT.OUTSET = LED_PIN;
         i2c_host.start(I2C_CLIENT_ADDRESS, I2C_HOST::i2c_host_direction::I2C_HOST_WRITE);
-        i2c_host.write(0x7F);
+        data = 0x7F;
+        i2c_host.write(&data);
         i2c_host.stop();
 
         i2c_host.start(I2C_CLIENT_ADDRESS, I2C_HOST::i2c_host_direction::I2C_HOST_READ);
@@ -52,7 +53,8 @@ int main(void) {
 
         LED_PORT.OUTCLR = LED_PIN;
         i2c_host.start(I2C_CLIENT_ADDRESS, I2C_HOST::I2C_HOST_WRITE);
-        i2c_host.write(0xFD);
+        data = 0xFD;
+        i2c_host.write(&data);
         i2c_host.stop();
 
         i2c_host.start(I2C_CLIENT_ADDRESS, I2C_HOST::I2C_HOST_READ);
