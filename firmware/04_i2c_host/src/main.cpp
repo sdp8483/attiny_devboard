@@ -3,15 +3,15 @@
 #include <avr/delay.h>
 #include <stdint.h>
 
-#include "clock.h"  /* set main clock frequency using platformio.ini fcpu value */
-#include "usart.h"
-#include "i2c.h"
+#include "clock.h"      /* set main clock frequency using platformio.ini fcpu value */
+#include "usart.h"      /* arduino like Serial print */
+#include "i2c.h"        /* i2c host library */
 
 /* Define -------------------------------------------------------------------- */
 #define LED_PORT            PORTA
 #define LED_PIN             PIN3_bm
 
-#define I2C_CLIENT_ADDRESS  0x38    /* PCF8574A 8 I/O expander */
+#define I2C_CLIENT_ADDRESS  0x38    /* PCF8574A I/O expander */
 
 /* Macro --------------------------------------------------------------------- */
 
@@ -33,7 +33,7 @@ int main(void) {
     LED_PORT.OUTCLR = LED_PIN;
     LED_PORT.DIRSET = LED_PIN;
 
-    i2c_host.init();
+    i2c_host.init(I2C_HOST::i2c_sck_freq::I2C_SCK_100kHz);
 
     uint8_t data;
 
@@ -45,7 +45,7 @@ int main(void) {
         i2c_host.stop();
 
         i2c_host.start(I2C_CLIENT_ADDRESS, I2C_HOST::i2c_host_direction::I2C_HOST_READ);
-        data = i2c_host.read(I2C_HOST::i2c_host_read_response::I2C_HOST_READ_NACK);
+        i2c_host.read(&data, I2C_HOST::i2c_host_response::I2C_HOST_NACK);
         i2c_host.stop();
 
         Serial.println(data, HEX);
@@ -58,7 +58,7 @@ int main(void) {
         i2c_host.stop();
 
         i2c_host.start(I2C_CLIENT_ADDRESS, I2C_HOST::I2C_HOST_READ);
-        data = i2c_host.read(I2C_HOST::i2c_host_read_response::I2C_HOST_READ_NACK);
+        i2c_host.read(&data, I2C_HOST::i2c_host_response::I2C_HOST_NACK);
         i2c_host.stop();
         Serial.println(data, HEX);
 
