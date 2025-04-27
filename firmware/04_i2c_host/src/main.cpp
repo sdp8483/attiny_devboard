@@ -33,7 +33,7 @@ int main(void) {
     LED_PORT.OUTCLR = LED_PIN;
     LED_PORT.DIRSET = LED_PIN;
 
-    i2c_host.init(I2C_HOST::i2c_sck_freq::I2C_SCK_100kHz);
+    i2c_host.init();
 
     uint8_t data;
 
