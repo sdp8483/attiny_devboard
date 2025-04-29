@@ -4,7 +4,7 @@
 #include <stdint.h>
 
 #include "clock.h"  /* set main clock frequency using platformio.ini fcpu value */
-#include "usart.h"
+#include "usart.h"  /* arduino like Serial print */
 
 /* Define -------------------------------------------------------------------- */
 #define LED_PORT        PORTA
